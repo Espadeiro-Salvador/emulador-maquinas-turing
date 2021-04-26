@@ -1,0 +1,37 @@
+; Copiar o primeiro número
+0 1_ 11 rr 0
+0 0_ 00 rr 0
+0 #_ #_ rs 1
+
+; Ir até ao fim de ambos os números
+1 1_ 1_ rs 1
+1 0_ 0_ rs 1
+1 __ __ ll soma
+
+; Somar quando não há carry
+soma 00 00 ll soma 
+soma 01 01 ll soma
+soma 10 11 ll soma
+soma 11 10 ll carry
+
+; Somar quando há carry
+carry 00 01 ll soma 
+carry 01 00 ll carry
+carry 10 10 ll carry
+carry 11 11 ll carry
+
+; Somar quando o número da fita de cima tem menos algarismos
+soma #0 #0 sl soma 
+soma #1 #1 sl soma
+carry #0 #1 sl soma 
+carry #1 #0 sl carry
+
+; Somar quando o número da fita de baixo tem menos algarismos
+soma 0_ 00 ll soma 
+soma 1_ 11 ll soma
+carry 0_ 01 ll soma 
+carry 1_ 10 ll carry
+
+; Fim da soma
+carry #_ #1 ss halt-accept
+soma #_ #_ sr halt-accept

@@ -1,0 +1,15 @@
+; Somar quando há carry
+carry 00 01 ll soma 
+carry 01 00 ll carry
+carry 10 10 ll carry
+carry 11 11 ll carry
+
+carry #0 #1 sl soma 
+carry #1 #0 sl carry
+
+; Somar quando o número da fita de baixo tem menos algarismos
+carry 0_ 01 ll soma 
+carry 1_ 10 ll carry
+
+; Fim da soma
+carry #_ #1 ss halt-accept

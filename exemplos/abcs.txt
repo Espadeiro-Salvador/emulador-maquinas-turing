@@ -1,0 +1,14 @@
+#reject_on_abort
+#messages True False
+
+0 a_ aa rr 0
+0 b_ b_ sl 1
+0 __ __ ll 4
+
+1 ba ba rl 1
+1 c_ c_ sr 2
+
+2 ca ca rr 2
+2 __ __ ss halt-accept
+
+4 __ __ ll halt-accept

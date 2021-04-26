@@ -1,0 +1,7 @@
+0 0_ 01 rr 0
+0 1_ 10 rr 0
+0 __ __ sl bobina
+
+bobina _1 _1 sl bobina
+bobina _0 _0 sl bobina
+bobina __ __ sr halt-accept

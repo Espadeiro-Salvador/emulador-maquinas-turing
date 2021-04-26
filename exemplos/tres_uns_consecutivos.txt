@@ -1,0 +1,11 @@
+0 1 1 r 1
+0 0 0 r 0
+0 _ _ r halt-reject
+
+1 1 1 r 2
+1 0 0 r 0
+1 _ _ r halt-reject
+
+2 1 1 r halt-accept
+2 0 0 r 0
+2 _ _ r halt-reject

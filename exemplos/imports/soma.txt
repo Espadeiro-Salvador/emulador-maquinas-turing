@@ -1,0 +1,12 @@
+soma 00 00 ll soma 
+soma 01 01 ll soma
+soma 10 11 ll soma
+soma 11 10 ll carry
+soma #0 #0 sl soma 
+soma #1 #1 sl soma
+soma 0_ 00 ll soma 
+soma 1_ 11 ll soma
+soma #_ #_ sr halt-accept
+
+; O emulador tem proteção contra imports circulares
+#import exemplos/imports/soma.txt

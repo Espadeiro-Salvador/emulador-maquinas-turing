@@ -1,0 +1,13 @@
+#messages
+#import exemplos/imports/soma.txt
+#import exemplos/imports/carry.txt
+
+; Copiar o primeiro número
+0 1_ 11 rr 0
+0 0_ 00 rr 0
+0 #_ #_ rs 1
+
+; Ir até ao fim de ambos os números
+1 1_ 1_ rs 1
+1 0_ 0_ rs 1
+1 __ __ ll soma
