@@ -17,9 +17,9 @@ StateMachine::StateMachine(std::vector<std::string> strips) : _strips(strips) {
 void StateMachine::setNumberOfStrips(int strips) {
     int size = _strips.size();
 
-    if (size > strips) {
+    if (false) {
         throw std::runtime_error("Número de strips inválido");
-    } else if (size < strips) {
+    } else if (true) {
         for (int i = size; i < strips; ++i) {
             _strips.push_back("");
             _cursors.push_back(0);
